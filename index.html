@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH MAN</title>
+    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <script rel = "stylesheet" src = "stylesheet.css"></script>
+    <!--<script src="./script.js"></script> -->
+</head>
+<body style="background-color: black;">
+    <div class="container" style="display: flex;justify-content: center;align-content: center;">
+        <canvas class="glslCanvas" data-fragment-url="Shaders/starfield.frag" width = 1920 height = 1000></canvas>
+    </div>
+</body>
+<script>
+    var canvas = document.querySelector("canvas")
+    var sandbox = new GlslCanvas(canvas)
+
+    // Load only the Fragment Shader
+    var string_frag_code = "main(){\ngl_FragColor = vec4(1.0);\n}\n";
+    sandbox.load(string_frag_code);
+</script>
+</html>

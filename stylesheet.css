@@ -1,0 +1,10 @@
+canvas {
+    min-width: 600px;
+    min-height: 10000px;
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
